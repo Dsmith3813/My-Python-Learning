@@ -55,7 +55,7 @@ print(f"{Fore.YELLOW}{Back.BLUE}   Where your high is just a sip away!   \n")
 
 # Introductions
 name = input(
-    f"\n{greatings}. My name is {robot_name}. May I have your name plaese?")
+    f"\n{greatings}. My name is {robot_name}. May I have your name plaese? ")
 
 # Check to see if this customer has been banned
 if name.casefold() in bannedList:
@@ -64,10 +64,10 @@ if name.casefold() in bannedList:
     exit(f"{Back.GREEN}{Fore.BLACK}\n\nAssHat!\n\n")
 else:
     print(
-        f"\nHello, {name}, hope you are having a nice {day_type}.\nHere is our menu for the {day_type}:\n")
+        f"\nHello, {name}, hope you are having a nice {day_type}.\nHere is our menu for this {day_type}:\n")
 
 # Lets print the menu for the customer
-print(tabulate(menu, headers=['No', 'Item', "Price"], floatfmt=".2f "))
+print(tabulate(menu, headers=['No', 'Item', "Price"], floatfmt=".2f"))
 
 # Determine what the customer would like from the menu
 item = 15
