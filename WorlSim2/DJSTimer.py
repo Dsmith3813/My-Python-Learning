@@ -49,7 +49,7 @@ class Timer(ContextDecorator):
         else:
             etime = f'{elapsed_time:.4f} seconds'
 
-        print(f' >> {self.name} elapsed time: {etime}\n')
+        print(f'>> {self.name} elapsed time: {etime}\n')
 
         return elapsed_time
 
