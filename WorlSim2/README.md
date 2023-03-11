@@ -50,7 +50,6 @@ I have not tested it yet.*
 
 5) I would like to make a lot of
 these functions into classes. But with the
-database calls, I was getting errors. *Not even sure if making classes will make any differance.*\
-One reason version 2 flopped is....**no... wait... I don't want to talk about it**.
+database calls, I was getting errors. *Not even sure if making classes will make any differance.* One reason version 2 flopped is....**no... wait... I don't want to talk about it**.
 
 6) Add AI componets to a Peep.
