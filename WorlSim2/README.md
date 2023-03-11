@@ -22,7 +22,7 @@ However, it is still very slow. Adding the database is slow as the population gr
 \
 The idea of this current world is that peeps works to the betterment of all peeps. Therefore, all peeps effort is food generation.
 
-Food is procces into uints, a single unit feeds one peep for one year. The goal for the peeps is to have some percent of food units as surpules to be carried over to the next year. If the population plus 2% (popultion * 1.02) is greater than the number of food units, peeps die.
+Food is procces into uints, a single unit feeds one peep for one year. The goal for the peeps is to have some percent of food units as surpules to be carried over to the next year. If the population plus 2% (`popultion * 1.02`) is greater than the number of food units, peeps die.
 
 Famnime affects food units production as well as spoilage. Something I need to consider, as the population grows, so will the space needed for fields. More peeps, more homes needed, less space for feilds. Over population
 
