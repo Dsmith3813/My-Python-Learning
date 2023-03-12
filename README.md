@@ -5,9 +5,10 @@ I'm just now, 3-03-2023 learning how to use GitHub. A friend suggested that I us
 
 I don't know how to use GitHub for learning, but here I am and I'll be reading the doc's.
 
-- `Barista Bot`
+- `Barista`
+- `BaristaGUI`
 
-My first program, or should I call it a script, was not Hello World, but a robotic barista. The YouTube channel for #NetworkChuck has a tutorial that I followed, coffee shop I think. And then changed the requirments a bit. See `Barista.py` for the code. I will add more as time permits. I do have a GUI versions that I'm putting the finishing touches to. The GUI version looks clucky to my eyes, but it was my first attempt to code GUI on a non mainframe environment.
+My first program, or should I call it a script, was not Hello World, but a robotic barista. The YouTube channel for #NetworkChuck has a tutorial that I followed, coffee shop I think. And then changed the requirments a bit. See `Barista.py` for the code. I will add more as time permits. The GUI version is coded for macos.
 
 - `World Simulation`
 
