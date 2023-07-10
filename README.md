@@ -1,7 +1,7 @@
 # Python Learning Stuff
 A place where I display my bad codding while learning.
 
-I'm just now, 3-03-2023 learning how to use GitHub. A friend suggested that I use GitHub as I might learn from others that may help me by suggesting better ways of doing things in python. Right now I'm using VScode, Python 3.10. something on aApple MBP M1. Planning to going to python V11 soon. I'm thinking about 11.1 as a safe upgrade.
+I'm just now, 3-03-2023 learning how to use GitHub. A friend suggested that I use GitHub as I might learn from others that may help me by suggesting better ways of doing things in python. Right now I'm using VScode, Python 3.11.3 on a Apple MBP M1.
 
 I don't know how to use GitHub for learning, but here I am and I'll be reading the doc's.
 
