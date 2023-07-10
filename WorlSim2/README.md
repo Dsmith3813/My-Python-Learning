@@ -12,14 +12,13 @@ writting python code. It all started with the question, can one populated the wo
 **There** has been three versions, V2 flopped, *I don't want to talk about it*. The issue I had with version 1 was throughput performace and memory usage. As the propulation grew, the program slowed down and then memory was used up. All peeps info was held in memory (I have 64g). I tried to go to 1,000 years, got to 2 billion peeps when it died, 31 hours later! I would like to go to 2,023 years and then 2025 and see how close to real numbers the simulation gets. Although, this simulated world is not like planet earth.
 
 **Version 3** I added a sqlite3 database (*to solve the memory problem*),
-peeps DNA and fixed some of the events to be more radom. The DNA is also randomly built. I fixed or reworked the code to be more efficant. 
+added peeps DNA and fixed some of the events to be more radom. The DNA is also randomly built. I fixed or reworked the code to be more efficant, as best I can. 
 
-However, it is still very slow. Adding the database is slow as the population grows; adding, deletting and updating records.
+However, it is still very slow. Adding the database is slow as the population grows; adding, deletting and updating records. I can't even run a 200 year test!
 
 ## World interactions
 
 ---
-\
 The idea of this current world is that peeps works to the betterment of all peeps. Therefore, all peeps effort is food generation.
 
 Food is procces into uints, a single unit feeds one peep for one year. The goal for the peeps is to have some percent of food units as surpules to be carried over to the next year. If the population plus 2% (`popultion * 1.02`) is greater than the number of food units, peeps die.
