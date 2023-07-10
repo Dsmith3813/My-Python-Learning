@@ -1,9 +1,12 @@
 # My attempt to make a world simulator. This package is still
-# A work in progress. It runs, but not all the planned funtionality is
+# A work in progress. It runs, but not all the planned functionality is
 # represented... YET! NOTE See WSParms.py for more details.
 #
+# NOTE: My first program, so it probably isn't very good python coding.
+# But, I can write a mean assembler program!
+#
 # TheBigD Started: 02/04/2022. Development continues.
-# Copyright (c) 2023 Dennis J. Smith All Rights Reserved Licens: MIT
+# Copyright (c) 2023 Dennis J. Smith All Rights Reserved License: MIT
 
 import WSParms2 as pm       # Parameter file.
 import WSpeeps as cp        # Class to create a peep.
@@ -19,13 +22,13 @@ from DJSTimer import Timer
 
 os.system('Clear')
 
-# Set global in memory accumilators and parms. 
+# Set global in memory accumulators and parms.
 # NOTE Investigate make this a data class
 population = 0          # program population
-year = 0                # In memory varable
+year = 0                # In memory variable
 EvePassed = 0           # Flags
 AdemPassed = 0
-foodstore = 50          # In memory storage contanir.
+foodstore = 50          # In memory storage container.
 longlife = pm.LongLife  # From parm file stored for program use
 life = pm.AvgLife
 sbirth = pm.brithBegin
@@ -40,10 +43,10 @@ print(f'\n>> World Simulation II {pm.program} V{pm.version}')
 
 def init():
     '''
-    Sets Program defaults and creats the first two peeps
+    Sets Program defaults and creates the first two peeps
     residing in the world and stores the information in the Peeps
-    database table Peeps; Adem and Eve. Initional setings for
-    Adem and Eve are stored in the parm file WSparms.py
+    database table Peeps; Adam and Eve. Initial settings for
+    Adam and Eve are stored in the parm file WSparms.py
     '''
     global population
 
@@ -76,7 +79,7 @@ def init():
 def population_cnt():
     '''
     Determines the current size of the population from the DB
-    Created becuase the program accumilator was not being updated
+    Created because the program accumulator was not being updated
     correctly
     '''
     tb.execute("SELECT COUNT (*) FROM Peeps")
@@ -88,17 +91,17 @@ def population_cnt():
 
 def calculate_death_range(starved):
     '''
-    Calutate the death (deletes) range by peeps name.
+    Calculate the death (deletes) range by peeps name.
     The x_factors should be a factor less then 1.
-    
+
     NOTE a peeps name is Pnnnnn. This function is called as it 
     has been determined death range was the outcome
     '''
 
     global population, year
 
-    if year > 20:
-        return 0
+    # if year > 20:    No clue what this is here
+    #     return 0
 
     # Init prams
     start_factor = .001
@@ -128,9 +131,7 @@ def calculate_death_range(starved):
 
 def loveBoat():
     '''
-    In this sumulation females and males get married to have kids.
-    If this bothers you, delete these programs from your computer.
-    More kids, more workers to work the fields
+    In this simulation females and males get married to have kids. Sorry if this  may bother some folks. The more kids, The more workers per family unit to work the fields. No other reason.
     '''
 
     marg = 0
@@ -154,7 +155,7 @@ def loveBoat():
         else:
             frows += rows
 
-    # Pull out the retured columns and process
+    # Pull out the returned columns and process
     for males, females in zip(mrows, frows):
         mname, mgen, mage, mb0, mb2, mb3, mb4 = males
         fname, fgen, fage, fb0, fb2, fb3, fb4 = females
@@ -165,14 +166,14 @@ def loveBoat():
         # Calculate pheromone effectiveness the higher the number the
         # stronger the pheromone. If both DNA bits 2 & 3 on, then phara
         # is 3, else if bit 3 is on, then 2 else 1
-        if (fb2 + fb3) == 2:    # Her phara
+        if (fb2 + fb3) == 2:    # Her pheromone
             herph = 3
         elif fb3 == 1:
             herph = 2
         else:
             herph = fb2
 
-        if (mb2 + mb3) == 2:    # His phara
+        if (mb2 + mb3) == 2:    # His pheromone
             hisph = 3
         elif mb3 == 1:
             hisph = 2
@@ -205,7 +206,7 @@ def loveBoat():
 
 def LoveNthunder():
     ''' 
-    Get a list of eligable girls to see if they are willing to become
+    Get a list of eligible girls to see if they are willing to become
     pregnant
     '''
     global sbirth, ebirth
@@ -266,7 +267,7 @@ def withChild():
                     SELECT Name FROM Peeps
                     WHERE Gender = 0
                     AND Prego = 1
-                '''
+                   '''
     tb.execute(pregnantGals,)
     rows = tb.fetchall()
 
@@ -339,7 +340,7 @@ def fieldofDreams():
     # Take the generated food and add it to the foodstore
     # NOTE: children & elderly should probably make less then
     #       20-55 year olds ?? some fraction ?? This isn't
-    #       accounted for in the parms file.
+    #       accounted for in the parms file or the program.
     foodGen = int((ablePeeps * pm.workperf))
     foodstore += foodGen
 
@@ -485,9 +486,9 @@ def lifeIsGood(LGyear):
     deathrate = 0
     brithRate = 0
 
-    # We process the year in this order, harvest food, before checking
-    # is any peep has died.
-    # Also, birthdays are done last so that they don't die before their time
+    # We process the year in this order; harvest food before checking
+    # that any peep has died. Also, birthdays are done last so that they
+    # don't die before their time
 
     # 1) Forage and process food
     foodgen, starved, workers, famine = fieldofDreams()
@@ -535,7 +536,8 @@ def lifeIsGood(LGyear):
     print(f'''\r   Year {LGyear:,} Pop {population:,} Deaths {Tdeath:,} Rate {deathrate:.2f}% Briths {births:,} Rate {brithRate:.2f}% Foodstore {foodstore:,}''', end='   \r')
 
     # Gather all counts for later analysis. This is a memory table
-    world.append([LGyear, population, workers, foodstore, foodgen, famine, starved, births, twins, brithRate, pregnatCNT, Tdeath, Ndeath, Sdeath, Mdeath, deathrate, married])
+    world.append([LGyear, population, workers, foodstore, foodgen, famine, starved, births,
+                 twins, brithRate, pregnatCNT, Tdeath, Ndeath, Sdeath, Mdeath, deathrate, married])
 
     LGyear += 1
 
@@ -610,7 +612,9 @@ with Timer(name='World Simulator II'):
 
     # Setup the file name for later ploting
     now = datetime.datetime.now()
-    filename = f'WorldSim_Y{pm.cycle}_D{now.year}{now.month}{now.day}_H{now.hour}M{now.minute}.csv'
+    filename = f'WorldSim_Y{pm.cycle}_D{now.year}{now.month:02}{now.day:02}_H{now.hour:02}M{now.minute:02}.csv'
+
+    statsName = f'WorldStats_Y{pm.cycle}_D{now.year}{now.month:02}{now.day:02}_H{now.hour:02}{now.minute:02}.txt'
 
     # Get the ball rolling
     year = init()
@@ -621,7 +625,8 @@ with Timer(name='World Simulator II'):
 
         # Terminate the program if all the peps died
         if population < 1:
-            warn = (f'\n\n\t>>> All Peeps have passed away. Population: {population} <<<')
+            warn = (
+                f'\n\n\t>>> All Peeps have passed away. Population: {population} <<<')
             print(tc.colored(warn, 'yellow', 'on_blue', ('bold', 'blink')))
             print(f'\n\t>>> Program Terminated Abnormaly <<<\n')
             sys.exit("\n\t>>> Fatel Error: That's all folks\n")
@@ -639,20 +644,29 @@ with Timer(name='World Simulator II'):
     abr = round(mean(avgBR), 2)
 
     # Print this stuff out to the terminal
-    # NOTE: This probably should be a txt file.
-    print(f'\n\n>> End Satistices.')
-    print(f'   World: {pop:,} Males: {males:,} ({malePcent}%) Females: {females:,} ({femalePcent}%)')
-    print(f'   Average Death Rate: {adr}% Average Birth Rate: {abr}%')
-    print(f'   Married: {married:,} ({marriedPcent}%) Avg Age: {avg:.2f}\n')
-    print(f'\tAge 1-10:  {under11:>9,}\tAge 11-20: {under21:>9,}')
-    print(f'\tAge 20-30: {under31:>9,}\tAge 30-40: {under41:>9,}')
-    print(f'\tAge 40-50: {under51:>9,}\tAge 50-60: {under61:>9,}')
-    print(f'\tAge 60-70: {under71:>9,}\tAge 70+:   {over70:>9,}\n')
+    # NOTE: This probably should be a txt file. It is now.
+    line = ''
+    line += f'\n\n>> End Satistices.'
+    line += f'\n   World: {pop:,} Males: {males:,} ({malePcent}%) Females: {females:,} ({femalePcent}%)'
+    line += f'\n   Average Death Rate: {adr}% Average Birth Rate: {abr}%'
+    line += f'\n   Married: {married:,} ({marriedPcent}%) Avg Age: {avg:.2f}\n'
+    line += f'\n\tAge 1-10:  {under11:>9,}\tAge 11-20: {under21:>9,}'
+    line += f'\n\tAge 20-30: {under31:>9,}\tAge 30-40: {under41:>9,}'
+    line += f'\n\tAge 40-50: {under51:>9,}\tAge 50-60: {under61:>9,}'
+    line += f'\n\tAge 60-70: {under71:>9,}\tAge 70+:   {over70:>9,}\n'
+
+    print(line)
 
     db.close()
 
-    # Reached the end of time, final data writes
-    fields1 = ['Year', 'Population', 'Workers', 'Food Store', 'Food Generated', 'Famine', 'Starved', 'Births', 'Twins', 'Birth Rate', 'Pergnat CNT', 'Deaths', 'Natural', 'Sickness', 'Merdured', 'Married']
+    with open(statsName, 'w') as f:
+        f.write(line)
+        f.close()
+
+    # Reached the end of time, final data writes: CSV Fields
+    fields1 = ['Year', 'Population', 'Workers', 'Food Store', 'Food Generated',
+               'Famine', 'Starved', 'Births', 'Twins', 'Birth Rate',
+               'Pergnat CNT', 'Deaths', 'Natural', 'Sickness', 'Merdured', 'Married']
 
     # writing to csv file
     with open(filename, 'w') as csvfile:
@@ -660,7 +674,8 @@ with Timer(name='World Simulator II'):
         csvwriter.writerow(fields1)
         csvwriter.writerows(world)
 
-    print('>> File created:', filename)
+    print('>> Details File created:', filename)
+    print('>> Stats File created:', statsName)
     print(f'   World Simulation II {pm.program} V{pm.version} Complete')
     print("   A river in your derci! (Arrivederci, if ya didn't get it)")
     print(' ')
