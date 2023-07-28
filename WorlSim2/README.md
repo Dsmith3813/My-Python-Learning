@@ -16,7 +16,9 @@ added peeps DNA and fixed some of the events to be more radom. The DNA is also r
 
 However, it is still very slow. Adding the database is slow as the population grows; adding, deletting and updating records. I can't even run a 200 year test!
 
-## World interactions
+**Version 4** I removed the sqlite3 database, running to slow for practical use. I'm using a dictionary, whitch runs faster. However, I'm back to the memory issue. I took some memory tables out. Made a differance, still more work to be dome.
+
+## World interactions  See WSparms4.py for more deatils about the planet environment.
 
 ---
 The idea of this current world is that peeps works to the betterment of all peeps. Therefore, all peeps effort is food generation.
