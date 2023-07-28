@@ -1,0 +1,15 @@
+
+>> World Simulation IV WSMain4.py V4.1.2023.07
+>> World Simulation IV Simulating 225 years.
+
+>> World Simulation IV End Statistics.
+   World: 301,345 Males: 150,820 (50.05%) Females: 150,525 (49.95%)
+   Average Death Rate: 2.02% Average Birth Rate: 6.81%
+   Married: 2 (0.00%) Avg Age: 17.00
+
+	Age 0-10:     136,873 (45.42%)	Age 11-20:     71,922 (23.87%)
+	Age 21-30:     39,535 (13.12%)	Age 31-40:     22,717 (7.54%)
+	Age 41-50:     13,943 (4.63%)	Age 51-60:      8,459 (2.81%)
+	Age 61-70:      5,302 (1.76%)	Age 70+:        2,594 (0.86%)
+
+>> World Simulation IV elapsed time: 6.7358 Seconds
