@@ -111,7 +111,7 @@ eveChrom = '0111110010000000'    # Eve's chromosome  0x7c80
 adamAge = 18
 eveAge = 18
 
-cycle = 300            # How many years to run the simulation
+cycle = 350            # How many years to run the simulation
 LifeImprovements = 25  # Every x years improve life settings
 
 # Program parms
@@ -134,17 +134,16 @@ marriageBegin = 17     # age someone can get married
 
 warDuration = 5        # If war breaks out, this is the duration
 
-WorkAge = 9              # starting age to begin to work
-WorkAgeEnd = LongLife - 5
-WorkProduce = 1.95        # How much units of food a peep can make
-ProduceMaxStore = 2       # how much food units can be stored
+WorkAge = 9               # starting age to begin to work
+WorkProduce = 1.75        # How much units of food a peep can make
+ProduceMaxStore = 1.50    # how much food units can be stored
 NaturalPlanetFood = 1000  # Natural food found on the planet in units
 
 # Probabilities. The simulation has a flip a coin function, these values are
 # passed to that function
-fertile = 0.050        # of a women getting pregnant
-lessFertile = 0.040    # of older women not able to get pregnant
-missCarriage = 0.060   # of a mis-carriage  - actual statistic from W.H.O
+fertile = 0.040        # of a women getting pregnant
+lessFertile = 0.030    # of older women not able to get pregnant
+missCarriage = 0.050   # of a mis-carriage  - actual statistic from W.H.O
 twins = 0.030          # of having twins   - actual statistic form W.H.O
 marprob21 = 0.700      # marriage probability for young folks
 marprob31 = 0.350      # marriage probability for older folks
