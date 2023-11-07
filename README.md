@@ -5,10 +5,10 @@ I'm just now, 3-03-2023 learning how to use GitHub. A friend suggested that I us
 
 I don't know how to use GitHub for learning, but here I am and I'll be reading the doc's.
 
-My first programs, or should I call it a script, was not Hello World, but a robotic barista. The YouTube channel for #NetworkChuck has a tutorial that I followed, coffee shop I think. And then changed the requirments a bit. See `Barista.py` for the code. I will add more as time permits. The GUI version is coded for macos.
+My first programs, or should I call it a script, was not Hello World, but a robotic barista. The YouTube channel for #NetworkChuck has a tutorial that I followed, coffee shop I think. And then changed the requirments a bit. See `Barista` for the code. I will add more as time permits. The GUI version is coded for macos.
 
-- `Barista`
-- `BaristaGUI`
+- `Barista.py`
+- `BaristaGUI.py`
 
 World simulation program II. A project I though of doing and then modify as I get better writting code. There has been three versions. While the program runs, it takes more than forever to run. Needs more work.
 
