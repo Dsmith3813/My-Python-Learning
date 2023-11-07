@@ -14,6 +14,8 @@ World simulation program II. A project I though of doing and then modify as I ge
 
 - `World Simulation`
 
+My hobby is photography, and I store backups of my images off site. One of my servies has a dumb 1gb file size upload. So, I create this speciatly backup to create 1 gb zip files of the images. If anyone has suggestion to make this better, I'm open. I would like to make the file progress better looking. Also, Python doesn't support passwords on zip files when your writting the file. I would like this option.
+
 - `Picture backup` 
 
 Enigma: More information comming as I get into the code and get it functionable. Has some twists.
