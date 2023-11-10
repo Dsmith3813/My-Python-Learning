@@ -20,7 +20,9 @@ My hobby is photography, and I store backups of my images off site. One of my se
 
 Enigma: More information comming as I get into the code and get it functionable. Has some twists.
 
-I decided to write a paper for this project. One reason is so I can get some thrird party to test if it is even more unbreakable. The code is complete, I need to decide when I will update it to geiHub.
+I decided to write a paper for this project. One reason is so I can get some thrird party to test if it is even more unbreakable. The code is complete, I need to decide when I will update it to gitHub.
 
-- `Enigma Device`
+- `Enigma Device`&emsp;&emsp;Comming soon.
+- `Encoding Folder`&emsp;Folder containing encryption stuff for the project.
+- `Gronsfeld Ciphe`&emsp;A modified Gronsfeld encodered.  
 
